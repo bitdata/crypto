@@ -1,0 +1,178 @@
+// Microsoft Visual C++ generated resource script.
+//
+#include "resource.h"
+
+#define APSTUDIO_READONLY_SYMBOLS
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 2 resource.
+//
+#include "afxres.h"
+
+/////////////////////////////////////////////////////////////////////////////
+#undef APSTUDIO_READONLY_SYMBOLS
+
+/////////////////////////////////////////////////////////////////////////////
+// 中文(中华人民共和国) resources
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_CHS)
+#ifdef _WIN32
+LANGUAGE LANG_CHINESE, SUBLANG_CHINESE_SIMPLIFIED
+#pragma code_page(936)
+#endif //_WIN32
+
+#ifdef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// TEXTINCLUDE
+//
+
+1 TEXTINCLUDE 
+BEGIN
+    "resource.h\0"
+END
+
+2 TEXTINCLUDE 
+BEGIN
+    "#include ""afxres.h""\r\n"
+    "\0"
+END
+
+3 TEXTINCLUDE 
+BEGIN
+    "\r\n"
+    "\0"
+END
+
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Dialog
+//
+
+IDR_MAINFRAME DIALOGEX 0, 0, 400, 300
+STYLE DS_SETFONT | DS_MODALFRAME | DS_CENTER | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "加密工具"
+FONT 9, "宋体", 400, 0, 0x0
+BEGIN
+    GROUPBOX        "对称加密",IDC_STATIC,7,7,324,74
+    CONTROL         "RC2(40位)",IDC_RADIO_RC2_40,"Button",BS_AUTORADIOBUTTON | WS_GROUP,46,24,52,10
+    CONTROL         "RC2(128位)",IDC_RADIO_RC2_128,"Button",BS_AUTORADIOBUTTON,106,24,56,10
+    CONTROL         "RC4",IDC_RADIO_RC4,"Button",BS_AUTORADIOBUTTON,170,24,28,10
+    CONTROL         "DES",IDC_RADIO_DES,"Button",BS_AUTORADIOBUTTON,206,24,28,10
+    CONTROL         "3DES",IDC_RADIO_3DES,"Button",BS_AUTORADIOBUTTON,242,24,32,10
+    CONTROL         "AES",IDC_RADIO_AES,"Button",BS_AUTORADIOBUTTON,282,24,28,10
+    LTEXT           "算法：",IDC_STATIC,16,24,25,8
+    LTEXT           "密码：",IDC_STATIC,16,45,25,8
+    EDITTEXT        IDC_EDIT_PWD,46,45,151,14,ES_AUTOHSCROLL
+    PUSHBUTTON      "加载密码...",IDC_BUTTON_LOAD_PWD,200,45,50,14
+    CONTROL         "ASCII",IDC_RADIO_ASCII,"Button",BS_AUTORADIOBUTTON | WS_GROUP,46,65,36,10
+    CONTROL         "UNICODE",IDC_RADIO_UNICODE,"Button",BS_AUTORADIOBUTTON,95,65,44,10
+    CONTROL         "十六进制",IDC_RADIO_HEX,"Button",BS_AUTORADIOBUTTON,152,65,48,10
+    PUSHBUTTON      "加密保存密码...",IDC_BUTTON_SAVE_PWD,254,45,65,14
+    PUSHBUTTON      "加密保存密钥...",IDC_BUTTON_SAVE_KEY,254,62,65,14
+    GROUPBOX        "非对称加密",IDC_STATIC,7,85,324,78
+    CONTROL         "RSA",IDC_RADIO_RSA,"Button",BS_AUTORADIOBUTTON | WS_GROUP,46,103,28,10
+    CONTROL         "DSA",IDC_RADIO_DSA,"Button",BS_AUTORADIOBUTTON,81,103,28,10
+    LTEXT           "算法：",IDC_STATIC,16,105,25,8
+    LTEXT           "密钥长度：",IDC_STATIC,129,105,41,8
+    EDITTEXT        IDC_EDIT_KEY_SIZE,173,103,24,14,ES_AUTOHSCROLL | ES_NUMBER
+    LTEXT           "位",IDC_STATIC,200,105,9,8
+    PUSHBUTTON      "新建密钥对",IDC_BUTTON_GEN_KEY,269,105,50,14
+    LTEXT           "公钥：",IDC_STATIC,16,125,25,8
+    EDITTEXT        IDC_EDIT_PUBLIC_KEY,46,125,151,14,ES_AUTOHSCROLL | ES_READONLY
+    PUSHBUTTON      "加载公钥...",IDC_BUTTON_LOAD_PUBLIC,200,125,50,14
+    PUSHBUTTON      "保存公钥...",IDC_BUTTON_SAVE_PUBLIC,254,125,65,14
+    LTEXT           "私钥：",IDC_STATIC,16,144,25,8
+    EDITTEXT        IDC_EDIT_PRIVATE_KEY,46,144,151,14,ES_AUTOHSCROLL | ES_READONLY
+    PUSHBUTTON      "加载私钥...",IDC_BUTTON_LOAD_PRIVATE,200,144,50,14
+    PUSHBUTTON      "加密保存私钥...",IDC_BUTTON_SAVE_PRIVATE,254,144,65,14
+    GROUPBOX        "散列",IDC_STATIC,7,167,324,32
+    CONTROL         "MD5",IDC_RADIO_MD5,"Button",BS_AUTORADIOBUTTON | WS_GROUP,46,180,28,10
+    CONTROL         "SHA",IDC_RADIO_SHA1,"Button",BS_AUTORADIOBUTTON,85,180,28,10
+    CONTROL         "SHA256",IDC_RADIO_SHA256,"Button",BS_AUTORADIOBUTTON,124,180,40,10
+    CONTROL         "SHA384",IDC_RADIO_SHA384,"Button",BS_AUTORADIOBUTTON,175,180,40,10
+    CONTROL         "SHA512",IDC_RADIO_SHA512,"Button",BS_AUTORADIOBUTTON,226,180,40,10
+    CONTROL         "无",IDC_RADIO_NODE,"Button",BS_AUTORADIOBUTTON,277,180,24,10
+    LTEXT           "算法：",IDC_STATIC,16,181,25,8
+    GROUPBOX        "对象路径",IDC_STATIC,7,203,324,90
+    LTEXT           "待加密、解密、散列、签名、验证签名的文件路径：",IDC_STATIC,16,220,185,8
+    EDITTEXT        IDC_EDIT_SOURCE,16,234,281,14,ES_AUTOHSCROLL
+    PUSHBUTTON      "...",IDC_BUTTON_SOURCE,303,234,17,14
+    LTEXT           "加解密后的文件路径，或散列、签名文件路径：",IDC_STATIC,16,257,169,8
+    EDITTEXT        IDC_EDIT_DEST,16,271,281,14,ES_AUTOHSCROLL
+    PUSHBUTTON      "...",IDC_BUTTON_DEST,303,271,17,14
+    PUSHBUTTON      "加密文件",IDC_BUTTON_ENCRYPT,343,7,50,14
+    PUSHBUTTON      "解密文件",IDC_BUTTON_DECRYPT,343,26,50,14
+    PUSHBUTTON      "计算散列",IDC_BUTTON_HASH,343,45,50,14
+    PUSHBUTTON      "生成签名",IDC_BUTTON_SIGN,343,64,50,14
+    PUSHBUTTON      "验证签名",IDC_BUTTON_VERIFY,343,83,50,14
+    PUSHBUTTON      "退出",IDCANCEL,343,102,50,14
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// DESIGNINFO
+//
+
+#ifdef APSTUDIO_INVOKED
+GUIDELINES DESIGNINFO 
+BEGIN
+    IDR_MAINFRAME, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 393
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 293
+    END
+END
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// String Table
+//
+
+STRINGTABLE 
+BEGIN
+    IDS_ERROR_SAVE_PWD      "存储密码需要先指定公钥"
+    IDS_ERROR_LOAD_PWD      "加载密码需要先指定私钥"
+    IDS_ERROR_NO_PWD        "未指定密码"
+    IDS_ERROR_DECRYPT       "解密失败"
+    IDS_ERROR_ENCRYPT       "加密失败"
+    IDS_ERROR_LOAD_PRIVATE_KEY "加载私钥需要指定密码"
+    IDS_ERROR_SAVE_PRIVATE_KEY "保存私钥需要指定密码"
+    IDS_ERROR_NO_SOURCE     "未指定源文件存放位置"
+    IDS_ERROR_NO_DEST       "未指定目标文件存放位置"
+    IDS_ERROR_NO_SIGN       "未指定签名文件存放位置"
+END
+
+STRINGTABLE 
+BEGIN
+    IDS_ERROR_NO_PRIVATE_KEY "未指定签名所需的私钥"
+    IDS_ERROR_NO_PUBLIC_KEY "未指定验证签名所需的公钥"
+    IDS_ERROR_SIGN          "签名失败"
+    IDS_ERROR_VERIFY        "验证签名失败"
+    IDS_ERROR_EXPORT        "从密码中导出密钥失败"
+    IDS_ERROR_HASH          "散列失败"
+END
+
+#endif    // 中文(中华人民共和国) resources
+/////////////////////////////////////////////////////////////////////////////
+
+
+
+#ifndef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 3 resource.
+//
+
+
+/////////////////////////////////////////////////////////////////////////////
+#endif    // not APSTUDIO_INVOKED
+
